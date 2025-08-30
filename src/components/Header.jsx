@@ -19,7 +19,7 @@ const Header = ({
       )}
       
       <div className="flex items-center">
-        <img src="src/assets/logo.png" alt="Logo E-MATHBLIND" className="w-10 h-10 mr-2 rounded" />
+      <img src="/logo.png" alt="Logo E-MATHBLIND" className="w-10 h-10 mr-2 rounded" />
       </div>
       
       {onSpeakClick ? (
