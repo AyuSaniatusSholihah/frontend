@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './Header';
+import PlayLogo from './PlayLogo';
+
 
 const HomeScreen = ({ startLearning, startQuiz }) => {
   return (
@@ -10,7 +12,7 @@ const HomeScreen = ({ startLearning, startQuiz }) => {
         {/* Main Content */}
         <div className="p-8 text-center">
           <div className="flex items-center justify-center mb-6">
-            <img src="/logo.png" alt="Logo E-MATHBLIND" className="w-10 h-10 mr-2 rounded" />
+            <PlayLogo className="w-10 h-10 mr-2 rounded" />
             <h1 className="text-2xl font-bold text-gray-800">E-MATHBLIND</h1>
           </div>
           <p className="text-gray-600 mb-8">

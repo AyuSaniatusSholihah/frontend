@@ -1,5 +1,6 @@
 import React from 'react';
 import { Volume2, ArrowLeft } from 'lucide-react';
+import PlayLogo from './PlayLogo';
 
 const Header = ({ 
   showBackButton = false, 
@@ -19,7 +20,7 @@ const Header = ({
       )}
       
       <div className="flex items-center">
-      <img src="/logo.png" alt="Logo E-MATHBLIND" className="w-10 h-10 mr-2 rounded" />
+      <PlayLogo className="w-10 h-10 mr-2 rounded" />
       </div>
       
       {onSpeakClick ? (
