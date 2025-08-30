@@ -6,7 +6,7 @@ import HomeScreen from './components/HomeScreen';
 import LearningScreen from './components/LearningScreen';
 import QuizScreen from './components/QuizScreen';
 import ResultsScreen from './components/ResultsScreen';
-
+import Leaderboard from './components/Leaderboard';
 // Import data
 import { learningContent, quizData } from './data/contentData';
 
@@ -267,6 +267,7 @@ const EMathBlindApp = () => {
             {...commonProps}
             startLearning={startLearning}
             startQuiz={startQuiz}
+            onLeaderboardClick={() => setCurrentScreen('leaderboard')}
           />
         );
       
@@ -307,6 +308,13 @@ const EMathBlindApp = () => {
             score={score}
             totalQuestions={totalQuestions}
             resetQuiz={resetQuiz}
+          />
+        );
+       case 'leaderboard':
+        return (
+          <Leaderboard 
+            {...commonProps}
+            onBack={() => setCurrentScreen('home')}
           />
         );
       
