@@ -149,29 +149,32 @@ const EMathBlindApp = () => {
 
   // Check answer using fuzzy matching
   const checkAnswer = (answer) => {
-    const quiz = quizData[currentQuiz];
-    const isCorrect = fuzzyMatch(answer, quiz.answers);
+  const quiz = quizData[currentQuiz];
+  const validAnswers = quiz.answers || [quiz.correctAnswer]; // fallback
+  
+  const isCorrect = fuzzyMatch(answer, validAnswers);
 
-    if (isCorrect) {
-      setScore(prevScore => prevScore + 1);
-      setFeedback('Hebat! Jawabanmu benar! ' + quiz.explanation);
-      speak('Hebat! Jawabanmu benar! ' + quiz.explanation);
+  if (isCorrect) {
+    setScore(prevScore => prevScore + 1);
+    setFeedback('Hebat! Jawabanmu benar! ' + quiz.explanation);
+    speak('Hebat! Jawabanmu benar! ' + quiz.explanation);
+  } else {
+    setFeedback('Sayang sekali, jawabanmu salah. Jawaban yang benar adalah: ' + quiz.correctAnswer + '. ' + quiz.explanation);
+    speak('Sayang sekali, jawabanmu salah. Jawaban yang benar adalah: ' + quiz.correctAnswer + '. ' + quiz.explanation);
+  }
+
+  setShowFeedback(true);
+  setTotalQuestions(prevTotal => prevTotal + 1);
+
+  setTimeout(() => {
+    if (currentQuiz < quizData.length - 1) {
+      // user klik Next saja
     } else {
-      setFeedback('Sayang sekali, jawabanmu salah. Jawaban yang benar adalah: ' + quiz.correctAnswer + '. ' + quiz.explanation);
-      speak('Sayang sekali, jawabanmu salah. Jawaban yang benar adalah: ' + quiz.correctAnswer + '. ' + quiz.explanation);
+      showResults();
     }
+  }, 3000);
+};
 
-    setShowFeedback(true);
-    setTotalQuestions(prevTotal => prevTotal + 1);
-
-    setTimeout(() => {
-      if (currentQuiz < quizData.length - 1) {
-        // Don't auto-advance, let user click next button
-      } else {
-        showResults();
-      }
-    }, 3000);
-  };
 
   // Next question
   const nextQuestion = () => {

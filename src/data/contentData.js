@@ -4,21 +4,21 @@ export const learningContent = [
     id: 1,
     title: "Mengenal Kubus",
     shape: "cube",
-    content: "Hai kawan, sekarang kita belajar bangun ruang kubus, namun sebelumnya kawan bisa membuka e-mathblindnya pada hal 1 untuk mengetahui bentuk kubus sudah siap, selamat belajar... Kubus mempunyai 6 sisi sama panjang, memiliki 12 rusuk, memiliki 8 titik sudut. Contoh kubus yaitu dadu yang digunakan main ular tangga",
-    buttonText: "Ucapkan lanjut untuk menuju hal berikutnya"
+    content: "Halo sahabat! Hari ini kita akan belajar tentang kubus. Kubus adalah bangun ruang yang semua sisinya sama panjang. Kubus punya 6 sisi, semuanya berbentuk persegi. Kubus punya 12 rusuk, yaitu garis tepi pada tiap sisi. Kubus punya 8 titik sudut, yaitu tempat bertemunya rusuk-rusuk. Bayangkan kamu memegang dadu. Nah, dadu itu adalah contoh nyata dari kubus. Kamu bisa meraba buku pop-up atau model kubus untuk merasakan sisinya yang sama besar. Klik lanjut dibagian bawah untuk menuju halaman berikutnya.",
+    buttonText: "Klik lanjut untuk menuju hal berikutnya"
   },
   {
     id: 2,
     title: "Mengenal Balok",
-    shape: "cube", // We'll modify this to look like a rectangular prism
-    content: "Balok adalah bangun ruang yang memiliki 6 sisi berbentuk persegi panjang. Balok memiliki 12 rusuk dan 8 titik sudut, sama seperti kubus. Perbedaannya adalah sisi-sisi balok tidak semuanya sama besar. Contoh balok yaitu kotak sepatu atau lemari es.",
-    buttonText: "Ucapkan lanjut untuk menuju hal berikutnya"
+    shape: "cuboid", // We'll modify this to look like a rectangular prism
+    content: "Halo sahabat! Sekarang kita belajar tentang balok. Balok hampir mirip kubus, tapi tidak semua sisinya sama panjang. Balok punya 6 sisi, terdiri dari 3 pasang sisi yang sama besar. Balok punya 12 rusuk dan 8 titik sudut, sama seperti kubus. Contoh balok di sekitar kita adalah kotak pensil atau lemari buku. Silakan raba buku pop-up untuk merasakan bentuk balok yang lebih panjang.",
+    buttonText: "Klik lanjut untuk menuju hal berikutnya"
   },
   {
     id: 3,
     title: "Mengenal Bola",
     shape: "sphere",
-    content: "Bola adalah bangun ruang yang memiliki permukaan melengkung. Semua titik pada permukaan bola memiliki jarak yang sama terhadap titik pusat. Bola tidak memiliki rusuk atau titik sudut. Contoh bola yaitu bola sepak, bola basket, atau kelereng.",
+    content: "Halo sahabat! Sekarang kita belajar tentang bola. Bola adalah bangun ruang yang seluruh permukaannya melengkung. Bola tidak punya rusuk dan tidak punya titik sudut. Bola punya titik pusat (pusat bola), dan dari pusat ke permukaan kita sebut jari-jari. Garis dari satu titik di permukaan melewati pusat ke titik seberangnya disebut diameter. Contoh bola di sekitar kita adalah bola sepak atau jeruk. Coba raba buku pop-up untuk merasakan bentuk bulat dari bola.",
     buttonText: "Selesai belajar"
   }
 ];
@@ -42,13 +42,13 @@ export const quizData = [
     correctAnswer: "12",
     explanation: "Kubus memiliki 12 rusuk yang menghubungkan titik-titik sudutnya."
   },
-  {
-    id: 3,
-    level: "Level 2: Tebak Bangun Ruang dari Kumpulan Objek",
-    question: "Dari kumpulan objek berikut, manakah yang berbentuk bola?",
-    image: "sphere",
-    answers: ["bola", "sphere", "bulat"],
-    correctAnswer: "bola",
-    explanation: "Bola adalah bangun ruang yang semua titik pada permukaannya berjarak sama dari pusat."
-  }
+    {
+  id: 3,
+  level: "Level 2: Membedakan Sifat Bangun Ruang",
+  question: "Aku sering dianggap kembar dengan Kubus. Kami sama-sama punya 6 sisi, 8 titik sudut, dan 12 rusuk. Yang membedakan kami adalah, sisi-sisiku tidak selalu sama besar. Apakah aku kubus, balok, bola, kerucut, jawab dengan benar?",
+  image: "cuboid",
+  answers: ["balok", "cuboid"],
+  correctAnswer: "balok",
+  explanation: "Balok dan Kubus sama-sama memiliki 6 sisi, 8 titik sudut, dan 12 rusuk. Namun, semua sisi Kubus berbentuk persegi yang sama besar, sedangkan sisi Balok berbentuk persegi panjang."
+}
 ];

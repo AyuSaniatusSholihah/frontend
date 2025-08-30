@@ -10,10 +10,9 @@ const HomeScreen = ({ startLearning, startQuiz }) => {
         {/* Main Content */}
         <div className="p-8 text-center">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-8 h-8 bg-teal-400 rounded mr-2"></div>
+            <img src="src/assets/logo.png" alt="Logo E-MATHBLIND" className="w-10 h-10 mr-2 rounded" />
             <h1 className="text-2xl font-bold text-gray-800">E-MATHBLIND</h1>
           </div>
-
           <p className="text-gray-600 mb-8">
             Belajar bangun ruang dengan menyenangkan
           </p>
@@ -21,7 +20,7 @@ const HomeScreen = ({ startLearning, startQuiz }) => {
           <div className="space-y-4">
             <button
               onClick={startLearning}
-              className="w-full py-3 bg-teal-200 text-gray-800 rounded-full font-semibold hover:bg-teal-300 transition-colors"
+              className="w-full py-3 bg-teal-300 text-gray-800 rounded-full font-semibold hover:bg-teal-400 transition-colors"
             >
               Belajar
             </button>
@@ -31,7 +30,7 @@ const HomeScreen = ({ startLearning, startQuiz }) => {
             >
               Quiz
             </button>
-            <button className="w-full py-3 bg-teal-200 text-gray-800 rounded-full font-semibold">
+            <button className="w-full py-3 bg-teal-300 text-gray-800 rounded-full font-semibold hover:bg-teal-400 transition-colors">
               Tracking
             </button>
           </div>
