@@ -8,7 +8,8 @@ const LearningScreen = ({
   learningContent, 
   nextLesson, 
   speak, 
-  setCurrentScreen 
+  setCurrentScreen,
+  stopSpeaking 
 }) => {
   const lesson = learningContent[currentLesson];
 
@@ -17,7 +18,10 @@ const LearningScreen = ({
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <Header 
           showBackButton={true}
-          onBack={() => setCurrentScreen('home')}
+          onBack={() => {
+            stopSpeaking();
+            setCurrentScreen('home');
+          }}
           onSpeakClick={speak}
           speakText={lesson.content}
         />

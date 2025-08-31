@@ -19,7 +19,8 @@ const QuizScreen = ({
   stopListening,
   nextQuestion,
   handleFinishQuiz,
-  setCurrentScreen
+  setCurrentScreen,
+  stopSpeaking
 }) => {
   const quiz = quizData[currentQuiz];
   const isLastQuestion = currentQuiz === quizData.length - 1;
@@ -90,7 +91,10 @@ const QuizScreen = ({
           {/* PERBAIKAN: Logika navigasi disatukan dan disederhanakan di sini */}
           <div className="mt-6 flex justify-between items-center">
             <button
-              onClick={() => setCurrentScreen('home')}
+              onClick={() => {
+                stopSpeaking();
+                setCurrentScreen('home');
+              }}
               className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800"
             >
               <ArrowLeft className="w-4 h-4 mr-1" />

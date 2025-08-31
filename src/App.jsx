@@ -205,6 +205,12 @@ const EMathBlindApp = () => {
     setCurrentScreen('results');
   };
 
+  //handler stop speaking untuk back
+  const goBack = (screen) => {
+  stopSpeaking();
+  setCurrentScreen(screen);
+};
+
   // Reset quiz
   const resetQuiz = () => {
     setCurrentQuiz(0);
