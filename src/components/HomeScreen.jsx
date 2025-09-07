@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import PlayLogo from './PlayLogo';
+import MathXplore from './mathXplore';
 
 
 const HomeScreen = ({ startLearning, startQuiz, onLeaderboardClick }) => {
@@ -10,10 +11,9 @@ const HomeScreen = ({ startLearning, startQuiz, onLeaderboardClick }) => {
         <Header />
 
         {/* Main Content */}
-        <div className="p-8 text-center">
+        <div className="p-4 text-center">
           <div className="flex items-center justify-center mb-6">
-            <PlayLogo className="w-10 h-10 mr-2 rounded" />
-            <h1 className="text-2xl font-bold text-gray-800">MATHXPLORE</h1>
+            <MathXplore size="text-2xl" />
           </div>
           <p className="text-gray-600 mb-8">
             Belajar bangun ruang dengan menyenangkan
