@@ -13,7 +13,7 @@ const HomeScreen = ({ startLearning, startQuiz, onLeaderboardClick }) => {
         <div className="p-8 text-center">
           <div className="flex items-center justify-center mb-6">
             <PlayLogo className="w-10 h-10 mr-2 rounded" />
-            <h1 className="text-2xl font-bold text-gray-800">E-MATHBLIND</h1>
+            <h1 className="text-2xl font-bold text-gray-800">MATHXPLORE</h1>
           </div>
           <p className="text-gray-600 mb-8">
             Belajar bangun ruang dengan menyenangkan
