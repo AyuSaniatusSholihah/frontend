@@ -15,7 +15,7 @@ const LearningScreen = ({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-100 to-pink-100 p-4">
-      <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+     <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <Header 
           showBackButton={true}
           onBack={() => {

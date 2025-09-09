@@ -1,9 +1,6 @@
 import React from 'react';
 import { Mic, MicOff, ArrowLeft } from 'lucide-react';
 
-// PERBAIKAN: Komponen Header dan ShapeRenderer diimpor di sini.
-// Pastikan file Header.js dan ShapeRenderer.js ada di folder yang sama.
-// Jika belum ada, Anda bisa gunakan kode dari jawaban saya sebelumnya.
 import Header from './Header'; 
 import ShapeRenderer from './ShapeRenderer';
 
@@ -34,8 +31,12 @@ const QuizScreen = ({
     <div className="min-h-screen bg-gradient-to-br from-orange-100 to-pink-100 p-4">
       <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <Header 
-          title={`Soal ${currentQuiz + 1}`}
-          onSpeakClick={() => speak(quiz.question)}
+          showBackButton={true}
+          onBack={() => {
+            stopSpeaking();
+            setCurrentScreen('home');
+            
+          }}
         />
 
         {/* --- Konten Kuis --- */}

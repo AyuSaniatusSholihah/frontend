@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Volume2 } from 'lucide-react';
 import MathXplore from './mathXplore'; 
+import Header from './Header';
 
 const HomeScreen = ({
   startLearning,
@@ -53,30 +54,24 @@ const HomeScreen = ({
             />
           )}
         </div>
-
-        <div className="p-4 text-center">
-          {isSpeaking && (
-            <div className="mb-4 p-3 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center">
-              <Volume2 className="w-4 h-4 mr-2 animate-pulse" />
-              <p className="text-sm">Sedang memutar sambutan...</p>
+        <div className="p-6 text-center">
               <button
                 onClick={handleStopSpeak}
-                className="ml-2 px-2 py-1 text-xs bg-red-100 text-red-600 rounded"
+                className="px-14 py-2 text-xs bg-red-100 text-red-600 rounded"
               >
-                Stop
+                kalian bisa stop disini, sambil dibantu oleh pendamping
               </button>
-            </div>
-          )}
+        
 
-          <div className="flex items-center justify-center mb-6">
-            <MathXplore size="text-2xl" />
+          <div className="flex items-center justify-center mb-5">
+            <MathXplore size="text-4xl" />
           </div>
 
           <p className="text-gray-600 mb-8">
             Belajar bangun ruang dengan menyenangkan
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             <button
               onClick={startLearning}
               className="w-full py-3 bg-teal-300 text-gray-800 rounded-full font-semibold hover:bg-teal-400 transition-colors"

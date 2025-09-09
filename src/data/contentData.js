@@ -41,6 +41,13 @@ export const learningContent = [
     shape: "triangularPrism",
     content: "Halo sahabat! Sekarang kita belajar tentang limas segitiga. Limas segitiga adalah bangun ruang yang memiliki alas berbentuk segitiga dan tiga sisi tegak berbentuk segitiga. Limas segitiga punya 4 sisi, 6 rusuk, dan 4 titik sudut. Contoh limas segitiga di sekitar kita adalah atap rumah yang berbentuk segitiga. Coba raba buku pop-up untuk merasakan bentuk limas segitiga.",
     buttonText: "Selesai belajar"
+  },
+  {
+    id: 7,
+    title: "Mengenal Limas Segiempat",
+    shape: "quadrilateralPrism",
+    content: "Halo sahabat! Sekarang kita belajar tentang limas segiempat. Limas segiempat adalah bangun ruang yang memiliki alas berbentuk segiempat dan empat sisi tegak berbentuk segitiga. Limas segiempat punya 5 sisi, 8 rusuk, dan 5 titik sudut. Contoh limas segiempat di sekitar kita adalah atap rumah yang berbentuk segiempat. Coba raba buku pop-up untuk merasakan bentuk limas segiempat.",
+    buttonText: "Selesai belajar"
   }
 
 ];
