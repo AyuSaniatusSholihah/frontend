@@ -86,22 +86,7 @@ const QuizScreen = ({
                   ? 'Tekan tombol di bawah untuk melanjutkan'
                   : 'Tekan untuk menjawab'}
             </p>
-          </div>
-
-          {/* --- Navigasi --- */}
-          {/* PERBAIKAN: Logika navigasi disatukan dan disederhanakan di sini */}
-          <div className="mt-6 flex justify-between items-center">
-            <button
-              onClick={() => {
-                stopSpeaking();
-                setCurrentScreen('home');
-              }}
-              className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800"
-            >
-              <ArrowLeft className="w-4 h-4 mr-1" />
-              Kembali
-            </button>
-
+            
             {/* PERBAIKAN: Tampilan skor lebih sederhana */}
             <div className="text-sm text-gray-500">
               Skor: {score}
@@ -134,6 +119,6 @@ const QuizScreen = ({
       </div>
     </div>
   );
-};
+} 
 
 export default QuizScreen;

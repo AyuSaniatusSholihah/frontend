@@ -1,8 +1,8 @@
-import React from 'react';
-import { Volume2, ArrowLeft } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Volume2 } from 'lucide-react';
+import Header from './Header';
 
-// Komponen Leaderboard
-function Leaderboard({ onBack }) {
+function Leaderboard({ onBack, stopSpeaking, setCurrentScreen }) {
   const leaderboardData = [
     { rank: 1, name: "Si A", avatar: "👦", correctAnswers: 85, wrongAnswers: 15 },
     { rank: 2, name: "Si B", avatar: "👩", correctAnswers: 78, wrongAnswers: 22 },
@@ -10,23 +10,28 @@ function Leaderboard({ onBack }) {
     { rank: 4, name: "Si D", avatar: "👩", correctAnswers: 65, wrongAnswers: 35 }
   ];
 
+  // ✅ Aktifkan suara otomatis saat halaman Leaderboard dibuka
+  useEffect(() => {
+    const text = "Anda sedang berada di halaman Leaderboard. "
+      + "Di halaman ini anda bisa mendengar peringkat peserta berdasarkan jumlah jawaban benar dan salah.";
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "id-ID"; 
+    speechSynthesis.speak(utterance);
+
+    return () => speechSynthesis.cancel(); // hentikan suara saat pindah halaman
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-100 to-pink-100 p-4">
-      {/* Container mirip HomeScreen */}
       <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-        
-        {/* Header */}
-        <div className="flex items-center justify-between p-4">
-          <button 
-            onClick={onBack}
-            className="w-12 h-12 bg-gray-100 rounded-full shadow-md flex items-center justify-center hover:bg-gray-200 transition-colors"
-          >
-            <ArrowLeft className="w-6 h-6 text-gray-700" />
-          </button>
-          <h1 className="text-xl font-bold text-gray-800">Leaderboard</h1>
-          <div className="w-12"></div> {/* Spacer biar center */}
-        </div>
-        
+        <Header 
+          showBackButton={true}
+          onBack={() => {
+            stopSpeaking && stopSpeaking();
+            setCurrentScreen('home');
+          }}
+        />
+
         {/* Isi Leaderboard */}
         <div className="p-6">
           {leaderboardData.map((player, index) => (
@@ -61,9 +66,18 @@ function Leaderboard({ onBack }) {
           ))}
         </div>
 
-        {/* Sound Button */}
+        {/* Tombol suara ulang */}
         <div className="flex justify-center p-4">
-          <button className="w-16 h-16 bg-black rounded-lg flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors">
+          <button
+            onClick={() => {
+              const text = "Anda sedang berada di halaman Leaderboard. "
+                + "Di halaman ini anda bisa mendengar peringkat peserta berdasarkan jumlah jawaban benar dan salah.";
+              const utterance = new SpeechSynthesisUtterance(text);
+              utterance.lang = "id-ID";
+              speechSynthesis.speak(utterance);
+            }}
+            className="w-16 h-16 bg-black rounded-lg flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors"
+          >
             <Volume2 className="w-8 h-8 text-white" />
           </button>
         </div>
