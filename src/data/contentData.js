@@ -20,7 +20,29 @@ export const learningContent = [
     shape: "sphere",
     content: "Halo sahabat! Sekarang kita belajar tentang bola. Bola adalah bangun ruang yang seluruh permukaannya melengkung. Bola tidak punya rusuk dan tidak punya titik sudut. Bola punya titik pusat (pusat bola), dan dari pusat ke permukaan kita sebut jari-jari. Garis dari satu titik di permukaan melewati pusat ke titik seberangnya disebut diameter. Contoh bola di sekitar kita adalah bola sepak atau jeruk. Coba raba buku pop-up untuk merasakan bentuk bulat dari bola.",
     buttonText: "Selesai belajar"
+  },
+  {
+    id: 4,
+    title: "Mengenal Prisma Segitiga",
+    shape: "triangularPrism",
+    content: "Halo sahabat! Sekarang kita belajar tentang prisma segitiga. Prisma segitiga adalah bangun ruang yang memiliki alas berbentuk segitiga dan dua sisi tegak berbentuk persegi panjang. Prisma segitiga punya 5 sisi, 9 rusuk, dan 6 titik sudut. Contoh prisma segitiga di sekitar kita adalah atap rumah yang berbentuk segitiga. Coba raba buku pop-up untuk merasakan bentuk prisma segitiga.",
+    buttonText: "Selesai belajar"
+  },
+  {
+    id: 5,
+    title: "Mengenal Kerucut",
+    shape: "cone",
+    content: "Halo sahabat! Sekarang kita belajar tentang kerucut. Kerucut adalah bangun ruang yang memiliki alas berbentuk lingkaran dan satu titik puncak. Kerucut punya 1 sisi lengkung dan 1 sisi datar (alas). Contoh kerucut di sekitar kita adalah topi pesta atau es krim. Coba raba buku pop-up untuk merasakan bentuk kerucut.",
+    buttonText: "Selesai belajar"
+  },
+  {
+    id: 6,
+    title: "Mengenal Limas Segitiga",
+    shape: "triangularPrism",
+    content: "Halo sahabat! Sekarang kita belajar tentang limas segitiga. Limas segitiga adalah bangun ruang yang memiliki alas berbentuk segitiga dan tiga sisi tegak berbentuk segitiga. Limas segitiga punya 4 sisi, 6 rusuk, dan 4 titik sudut. Contoh limas segitiga di sekitar kita adalah atap rumah yang berbentuk segitiga. Coba raba buku pop-up untuk merasakan bentuk limas segitiga.",
+    buttonText: "Selesai belajar"
   }
+
 ];
 
 export const quizData = [
@@ -39,7 +61,7 @@ export const quizData = [
     question: "Berapa jumlah rusuk kubus?",
     image: "cube",
     answers: ["12", "dua belas", "duabelas"],
-    correctAnswer: "12",
+    correctAnswer: "dua belas ",
     explanation: "Kubus memiliki 12 rusuk yang menghubungkan titik-titik sudutnya."
   },
     {

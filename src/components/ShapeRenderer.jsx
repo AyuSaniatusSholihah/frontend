@@ -85,7 +85,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
   const depth = isLearning ? 100 : 75;    // Sumbu Z
 
   // Gaya untuk setiap sisi balok, agar tidak berulang
-  const faceStyle = {
+  const cuboidFaceStyle = {
     position: 'absolute',
     border: '1px solid #047857', // green-700
     backfaceVisibility: 'hidden', // Praktik terbaik untuk performa & tampilan
@@ -105,7 +105,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Depan */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${width}px`,
             height: `${height}px`,
             backgroundColor: '#4ade80', // green-400
@@ -116,7 +116,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Belakang */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${width}px`,
             height: `${height}px`,
             backgroundColor: '#22c55e', // green-500
@@ -127,7 +127,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Kanan */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${depth}px`,
             height: `${height}px`,
             backgroundColor: '#86efac', // green-300
@@ -140,7 +140,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Kiri */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${depth}px`,
             height: `${height}px`,
             backgroundColor: '#16a34a', // green-600
@@ -153,7 +153,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Atas */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${width}px`,
             height: `${depth}px`,
             backgroundColor: '#8ee3acff', // green-200
@@ -166,7 +166,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
         {/* Sisi Bawah */}
         <div
           style={{
-            ...faceStyle,
+            ...cuboidFaceStyle,
             width: `${width}px`,
             height: `${depth}px`,
             backgroundColor: '#14532d', // green-900
@@ -188,6 +188,7 @@ const ShapeRenderer = ({ type, isLearning = false }) => {
           <div className="w-6 h-6 bg-white rounded-full mt-4 ml-6 opacity-60"></div>
         </div>
       );
+
 
     default:
       return (

@@ -46,8 +46,8 @@ const EMathBlindApp = () => {
         const transcript = event.results[0][0].transcript.toLowerCase();
         setUserAnswer(transcript);
         setIsListening(false);
-        setTimeout(() => checkAnswer(transcript), 500);
-      };
+        setTimeout(() => checkAnswer(transcript, currentQuiz), 500);
+};
 
       recognitionRef.current.onerror = (event) => {
         console.error('Speech recognition error:', event.error);
@@ -148,10 +148,10 @@ const EMathBlindApp = () => {
   };
 
   // Check answer using fuzzy matching
-  const checkAnswer = (answer) => {
-  const quiz = quizData[currentQuiz];
-  const validAnswers = quiz.answers || [quiz.correctAnswer]; // fallback
-  
+  const checkAnswer = (answer, quizIndex) => {
+  const quiz = quizData[quizIndex];
+  const validAnswers = quiz.answers || [quiz.correctAnswer];
+
   const isCorrect = fuzzyMatch(answer, validAnswers);
 
   if (isCorrect) {
@@ -167,14 +167,13 @@ const EMathBlindApp = () => {
   setTotalQuestions(prevTotal => prevTotal + 1);
 
   setTimeout(() => {
-    if (currentQuiz < quizData.length - 1) {
+    if (quizIndex < quizData.length - 1) {
       // user klik Next saja
     } else {
       showResults();
     }
   }, 3000);
 };
-
 
   // Next question
   const nextQuestion = () => {
